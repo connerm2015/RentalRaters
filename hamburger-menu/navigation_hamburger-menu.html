@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    
+    <script>
+        // Ignore this in your implementation
+        window.isMbscDemo = true;
+    </script>
+
+    <title>Hamburger menu</title>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+    <script src="js/mobiscroll.javascript.min.js"></script>
+
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .md-hamb {
+        display: inline-block;
+    }
+    </style>
+
+</head>
+<body>
+
+<div mbsc-page class="demo-hamburger-menu">
+    <div class="mbsc-form-group">
+        <div class="mbsc-form-group-title">Hamburger menu types</div>
+        <div class="md-hamb mbsc-padding">
+            <ul id="demo-icon" class="mbsc-cloak">
+                <li data-icon="newspaper">News</li>
+                <li data-icon="material-people">People</li>
+                <li data-icon="bubble">Messages</li>
+                <li data-icon="fa-globe">Notifications</li>
+            </ul>
+        </div>
+        <div class="md-hamb mbsc-padding">
+            <ul id="demo-icon-text" class="mbsc-cloak">
+                <li data-icon="newspaper">News</li>
+                <li data-icon="material-people">People</li>
+                <li data-icon="bubble">Messages</li>
+                <li data-icon="fa-globe">Notifications</li>
+            </ul>
+        </div>
+        <div class="md-hamb mbsc-padding">
+            <ul id="demo-text" class="mbsc-cloak">
+                <li>News</li>
+                <li>People</li>
+                <li>Messages</li>
+                <li>Notifications</li>
+            </ul>
+        </div>
+        <div class="md-hamb mbsc-padding">
+            <ul id="demo-gear" class="mbsc-cloak">
+                <li data-icon="newspaper"></li>
+                <li data-icon="material-people"></li>
+                <li data-icon="bubble"></li>
+                <li data-icon="fa-globe"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    mobiscroll.settings = {
+        theme: 'ios',
+        lang: 'en'
+    };
+
+    mobiscroll.nav('#demo-icon', {
+        lang: 'en',                // Specify language like: lang: 'pl' or omit setting to use default
+        theme: 'ios',              // Specify theme like: theme: 'ios' or omit setting to use default
+        type: 'hamburger'          // More info about type: https://docs.mobiscroll.com/4-8-3/javascript/navigation#opt-type
+    });
+    
+    mobiscroll.nav('#demo-icon-text', {
+        lang: 'en',                // Specify language like: lang: 'pl' or omit setting to use default
+        theme: 'ios',              // Specify theme like: theme: 'ios' or omit setting to use default
+        type: 'hamburger',         // More info about type: https://docs.mobiscroll.com/4-8-3/javascript/navigation#opt-type
+        menuText: 'Menu'           // More info about menuText: https://docs.mobiscroll.com/4-8-3/javascript/navigation#localization-menuText
+    });
+    
+    mobiscroll.nav('#demo-text', {
+        lang: 'en',                // Specify language like: lang: 'pl' or omit setting to use default
+        theme: 'ios',              // Specify theme like: theme: 'ios' or omit setting to use default
+        type: 'hamburger',         // More info about type: https://docs.mobiscroll.com/4-8-3/javascript/navigation#opt-type
+        menuIcon: '',              // More info about menuIcon: https://docs.mobiscroll.com/4-8-3/javascript/navigation#localization-menuIcon
+        menuText: 'Menu'           // More info about menuText: https://docs.mobiscroll.com/4-8-3/javascript/navigation#localization-menuText
+    });
+    
+    mobiscroll.nav('#demo-gear', {
+        lang: 'en',                // Specify language like: lang: 'pl' or omit setting to use default
+        theme: 'ios',              // Specify theme like: theme: 'ios' or omit setting to use default
+        type: 'hamburger',         // More info about type: https://docs.mobiscroll.com/4-8-3/javascript/navigation#opt-type
+        menuIcon: 'line-settings'  // More info about menuIcon: https://docs.mobiscroll.com/4-8-3/javascript/navigation#localization-menuIcon
+    });
+</script>
+
+</body>
+</html>
